@@ -90,6 +90,11 @@ document.getElementById('contactForm').onsubmit = function(event) {
   // You can add your form submission logic here (e.g., AJAX request, validation, etc.)
   alert('Form submitted!'); // Replace with your actual form submission handling
   closeModal(); // Close the modal after form submission
+
+  const inputFields = document.querySelectorAll('#contactForm input');
+  inputFields.forEach((field) => {
+    field.value = ''; // Clear the value of each input field
+  });
 }
 
 
