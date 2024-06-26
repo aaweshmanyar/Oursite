@@ -91,7 +91,7 @@ document.getElementById('contactForm').onsubmit = function(event) {
   alert('Form submitted!'); // Replace with your actual form submission handling
   closeModal(); // Close the modal after form submission
 
-  const inputFields = document.querySelectorAll('#contactForm input');
+  const inputFields = document.querySelectorAll('#contactForm input textarea');
   inputFields.forEach((field) => {
     field.value = ''; // Clear the value of each input field
   });
