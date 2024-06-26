@@ -64,7 +64,7 @@ addEventOnElem(window, "scroll", headerActive);
 
 
 
-
+//Modal opening & Closing 
 function openModal() {
   var modal = document.getElementById("myModal");
   modal.style.display = "block";
@@ -91,3 +91,15 @@ document.getElementById('contactForm').onsubmit = function(event) {
   alert('Form submitted!'); // Replace with your actual form submission handling
   closeModal(); // Close the modal after form submission
 }
+
+
+// Send Data to the contact-form sheet
+const scriptURL = 'https://script.google.com/macros/s/AKfycby0sz-XvAvNza7CToXf_lv30bQ6RYwCzTJN0DNror7GE7m2JGqBPClnjNqdjtdkqOA/exec'
+const form = document.forms['submit-to-google-sheet']
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => console.log('Success!', response))
+    .catch(error => console.error('Error!', error.message))
+})
