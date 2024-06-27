@@ -1060,6 +1060,15 @@ body {
     margin: 25% auto;
   }
 
+  .btn-primary{
+    height: 20px;
+    width: 180px;
+    padding: 20px;
+    font-size: 9px;
+    white-space: nowrap;
+    text-align : left;
+  }
+
   .back-top-btn{
     font-size: 25px;
   }
