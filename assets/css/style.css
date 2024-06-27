@@ -1061,10 +1061,10 @@ body {
   }
 
   .btn-primary{
-    height: 20px;
-    width: 180px;
+    height: 25px;
+    width: 185px;
     padding: 20px;
-    font-size: 10px;
+    font-size: 13px;
     white-space: nowrap;
     text-align : left;
   }
