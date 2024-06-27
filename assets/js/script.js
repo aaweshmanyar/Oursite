@@ -92,9 +92,7 @@ document.getElementById('contactForm').onsubmit = function(event) {
   closeModal(); // Close the modal after form submission
 
    // Clear all input fields
-   document.getElementById("name").value = '';
-   document.getElementById("email").value = '';
-   document.getElementById("message").value = '';
+  form.reset();
 
 }
 
