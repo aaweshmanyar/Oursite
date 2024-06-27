@@ -276,6 +276,7 @@ body {
   color: var(--black);
   font-size: var(--fs-1);
   line-height: 1.1;
+  text-align: left;
 }
 
 .h2,
@@ -1015,12 +1016,12 @@ body {
   right: 30px;
   background-color: var(--majorelle-blue);
   color: var(--white);
-  font-size: 31px;
+  font-size: 35px;
   padding: 16px;
   border-radius: var(--radius-8);
   z-index: 4;
-  visibility: hidden;
-  opacity: 0;
+  visibility: visible;
+  opacity: 1;
   transition: var(--transition-1);
 }
 
