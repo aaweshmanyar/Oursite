@@ -85,25 +85,35 @@ window.onclick = function(event) {
 }
 
 // Handle form submission
-document.getElementById('contactForm').onsubmit = function(event) {
-  event.preventDefault(); // Prevent the form from submitting
-  // You can add your form submission logic here (e.g., AJAX request, validation, etc.)
-  alert('Form submitted!'); // Replace with your actual form submission handling
-  closeModal(); // Close the modal after form submission
+// document.getElementById('contactForm').onsubmit = function(event) {
+//   event.preventDefault(); // Prevent the form from submitting
+//   // You can add your form submission logic here (e.g., AJAX request, validation, etc.)
+//   alert('Form submitted!'); // Replace with your actual form submission handling
+//   closeModal(); // Close the modal after form submission
 
-   // Clear all input fields
-  form.reset();
+//    // Clear all input fields
+//   form.reset();
 
-}
+// }
 
 
  // Send Data to the contact-form sheet
  const scriptURL = 'https://script.google.com/macros/s/AKfycbwID_IVbwvV9nNKkIczdV3mAHk4CpbLVQcVxR4ZqDIkZnFa3YmJo5Jq2qAuO2NWnr06/exec'
  const form = document.forms['submit-to-google-sheet']
- 
+
  form.addEventListener('submit', e => {
    e.preventDefault()
    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-     .then(response => console.log('Success!', response))
+     .then(response => {
+      setTimeout(() => {
+        Swal.fire({
+          icon: "success",
+          text: "Message sent Successfully...!"
+        });
+      }, 100);
+
+      form.reset();
+      closeModal();
+     })
      .catch(error => console.error('Error!', error.message))
  })
