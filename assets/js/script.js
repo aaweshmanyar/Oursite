@@ -105,12 +105,12 @@ window.onclick = function(event) {
    e.preventDefault()
    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
      .then(response => {
-      setTimeout(() => {
+      // setTimeout(() => {
         Swal.fire({
           icon: "success",
           text: "Message sent Successfully...!"
         });
-      }, 100);
+      // }, 100);
 
       form.reset();
       closeModal();
