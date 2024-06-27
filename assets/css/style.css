@@ -1015,7 +1015,7 @@ body {
   right: 30px;
   background-color: var(--majorelle-blue);
   color: var(--white);
-  font-size: 18px;
+  font-size: 31px;
   padding: 16px;
   border-radius: var(--radius-8);
   z-index: 4;
@@ -1050,11 +1050,21 @@ body {
  * responsive for large than 575px screen
  */
 
- @media (max-width: 480px) {
+ @media (max-width: 370px){
+  .back-top-btn{
+    font-size:18px;
+  }
+ }
+
+ @media (max-width: 485px) {
   .modal-content {
     top:3rem;
     width: 95%;
     margin: 25% auto;
+  }
+
+  .back-top-btn{
+    font-size: 15px;
   }
 }
 
@@ -1063,6 +1073,10 @@ body {
   /**
    * REUSED STYLE
    */
+
+   .back-top-btn{
+    font-size: 18px;
+  }
 
    .modal-content {
     width: 85%;
