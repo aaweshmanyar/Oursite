@@ -19,7 +19,7 @@
   /**
    * colors
    */
-
+   --email-color: hsl(4, 90%, 58%);
   --sky-blue-crayola: hsl(188, 64%, 60%);
   --raisin-black_90: hsla(240, 8%, 12%, 0.9);
   --raisin-black-1: hsl(240, 8%, 17%);
@@ -213,7 +213,9 @@ a {
 }
 
 img {
-  height: auto; }
+  height: 45px; 
+  width: 45px;
+}
 
 .hero-banner img{
   width: 100%;
@@ -264,6 +266,9 @@ body {
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
+
+
+
 
 .container { padding-inline: 15px; }
 
@@ -376,7 +381,7 @@ body {
 
 .social-list { display: flex; }
 
-.w-100 { width: 100%; }
+.w-100 { width: 100%; height: 100%; }
 
 .section-subtitle {
   color: var(--cool-gray);
@@ -414,6 +419,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top;
 }
 
 .has-bg-image {
@@ -456,8 +462,9 @@ body {
 
 .logo {
   color: var(--raisin-black-1);
-  font-size: 3.6rem;
+  font-size: 3.3rem;
   font-weight: var(--fw-700);
+  
 }
 
 .nav-open-btn {
